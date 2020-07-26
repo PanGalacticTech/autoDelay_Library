@@ -1,0 +1,4 @@
+autoDelay	KEYWORD1
+
+setDelayTime	KEYWORD2
+delayScript	KEYWORD2
