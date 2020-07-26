@@ -1,7 +1,7 @@
 /*--------------------------------------autoDelay Library Example--------------------------------
  * 
  *  The autoDelay library lets the user feed a single value in milliseconds to a function, which 
- *  returns the variable timeDelayFin as true when that time has elapsed.
+ *  returns the variable delayComplete as true when that time has elapsed.
  * 
  * Used to help avoid using the delay() function
  *  
@@ -15,12 +15,12 @@
 
 //-----------------------------Timer Function, Must include----------------------------
 
-#include <autoDelay.h>
+#include "autoDelay.h"
 
 autoDelay autodelay;    // set up autodelay instance. NO PARENTHESIS if no value to pass.  
 
-int timerOne = 500;    // Timer value - set to the length of delay you require.
-                        // Can be replaced with your own variable
+int timerOne = 500;    // Timer value - set to the length of delay required.
+                       
 
 //-----------------------^^^---Timer Function, Must include----------------------------
 
@@ -29,7 +29,7 @@ int timerOne = 500;    // Timer value - set to the length of delay you require.
 
 //---------Other Variables--- Only used for Example Sketch-----------------------------
 
-int ledPin = 4;                                 // Set the Output Pin
+int ledPin = 13;                                 // Set the Output Pin
 
 int ledState = LOW;                            // state of the LED pin
 
@@ -44,7 +44,7 @@ void setup() {
   pinMode(ledPin, OUTPUT);                       // sets up LED pin as output pin
 
 
-  autodelay.begin(9600);                          // function to set up serial communication. uncomment if unneeded
+  autodelay.begin(9600);                          // function to set up serial communication. Uncomment if no required
 
 }
 //------------------------^^^^ END OF SETUP------------------------------
@@ -59,6 +59,8 @@ void setup() {
 void loop() {
 
 
+// This was the old method for calling the delay script
+/*
 
  //------------timer function-----------------------------------------------------
  autodelay.delayScript(timerOne);   // call delayScript by feeding it an integer or another variable. Timing in Miliseconds
@@ -68,8 +70,14 @@ void loop() {
 
 
  //-------------------IF Time has elapsed -----------------------------------
-  if (autodelay.timeDelayFin == true) { // if this is true, at once  // do the thing //  
-//timeDelayFin value will reset to false automatically.
+//  if (autodelay.delayComplete == true) { // if this is true, at once  // do the thing //  
+
+*/
+// Old Method ^^^ Depreciated
+
+
+
+if (autodelay.delayScript(timerOne)){  // if this is true, at once  // do the thing //   
 
     
  //-----The Thing to be Done------VVVV  
