@@ -6,14 +6,14 @@
 
     functions include delays passed values in:
     Micro & Milliseconds,
-    Seconds, and Minuites.
+    Seconds, and Minutes.
 
     Makes timing events a piece of cake.
 
     Written by Declan Heard. 09/08/2020
 
     Released into Public Domain
-    Free to Distibute and Use.
+    Free to Distribute and Use.
 
 */
 

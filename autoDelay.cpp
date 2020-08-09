@@ -6,14 +6,14 @@
 
     functions include delays passed values in:
     Micro & Milliseconds,
-    Seconds, and Minuites.
+    Seconds, and Minutes.
     
     Makes timing events a piece of cake.
 
     Written by Declan Heard. 09/08/2020
     
     Released into Public Domain
-    Free to Distibute and Use.
+    Free to Distribute and Use.
 
 */
 
@@ -116,7 +116,7 @@ bool autoDelay::minutesDelay(uint32_t delayTime) {    // Delay function that can
 // Depreciated // Old version
 
 // This has been left in place to keep functionality with older versions of library
-// Function has been changed to reflect new implmentation. Origional implementation is below for reference.
+// Function has been changed to reflect new implementation. Original implementation is below for reference.
 
 
 
@@ -138,7 +138,7 @@ bool autoDelay::minutesDelay(uint32_t delayTime) {    // Delay function that can
 
 
 
-// Origional Implementation
+// Original Implementation
 /*
 
   bool autoDelay::delayScript(uint32_t delayTime) {             // Passed DelayTime value
