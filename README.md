@@ -11,7 +11,7 @@
 
     functions include delays passed values in:
     Micro & Milliseconds,
-    Seconds, and Minuites.
+    Seconds, and Minutes.
     
     Makes timing events a piece of cake.
 
