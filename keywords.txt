@@ -2,4 +2,9 @@ autoDelay	KEYWORD1
 
 setDelayTime	KEYWORD2
 delayScript	KEYWORD2
+millisDelay	KEYWORD2
+microsDelay	KEYWORD2
+secondsDelay 	KEYWORD2
+minuitesDelay	KEYWORD2
+
 delayComplete 	KEYWORD2

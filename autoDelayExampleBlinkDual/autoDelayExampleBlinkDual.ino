@@ -1,20 +1,30 @@
 /*--------------------------------------autoDelay Library Example--------------------------------
 
-    The autoDelay library lets the user feed a single value in milliseconds to a function, which
-    returns the variable timeDelayFin as true when that time has elapsed.
 
-   Used to help avoid using the delay() function
+   Simple method for timing events without using interrupt based delay functions
 
-    Written by Declan Heard. 03/08/2019
+    autoDelay != delay();
 
+    functions include delays passed values in:
+    Micro & Milliseconds,
+    Seconds, and Minuites.
+    
+    Makes timing events a piece of cake.
+
+    Written by Declan Heard. 09/08/2020
+    
+    Released into Public Domain
     Free to Distibute and Use.
 
 
-    This Sketch shows you how to use 2 seperate instances of autoDelay to control the timing
+
+    This Sketch used seperate instances of autoDelay to control the timing
     of two seperate functions independently.
 
-    More can be added as nessissary, just give them each a unique name 
+    More can be added as nessissary, just give them each a unique name.
 
+
+     This example uses depreciated function names, but library is now backwards compatable with older versions.
 */
 
 
@@ -29,11 +39,11 @@ autoDelay autodelay2;    // set up 2nd autodelay instance if required
 
 
 
-int timerOne = 500;    // Timer value - set to the length of delay you require. 
-// Can be replaced with your own variable
+int timerOne = 500;    // Timer value - set to the length of delay required. 
 
-int timerTwo = 750;    // Timer value - set to the length of delay you require.
-// Can be replaced with your own variable
+
+int timerTwo = 750;    // Timer value - set to the length of delay required.
+
 
 //-----------------------^^^---Timer Function, Must include----------------------------
 
@@ -74,46 +84,26 @@ void loop() {
 
 
 
-  //------------timer function-----------------------------------------------------
-  autodelay.delayScript(timerOne);   // call delayScript by feeding it an integer or another variable. Timing in Miliseconds
-
-  autodelay2.delayScript(timerTwo);   // call delayScript2 by feeding it an integer or another variable. Timing in Miliseconds
-
-  // autodelay.delayScript(1000);   // alternative version, fed directly by integer.
-
-
 
   //-------------------IF Time ONE has elapsed -----------------------------------
-  if (autodelay.timeDelayFin == true) { // if this is true, at once  // do the thing //
-    //timeDelayFin value will reset to false automatically.
+  if (autodelay.delayScript(timerOne)) { // if this is true, at once  // do the thing //
 
 
-    //-----The Thing to be Done------VVVV
 
    REDstateChange();
 
-    //-----^^^^^^^ End of The Thing thats done------
-
-  }  // end of IF statement
+  }  
 
 
  //-------------------IF Time TWO has elapsed -----------------------------------
-  if (autodelay2.timeDelayFin == true) { // if this is true, at once  // do the thing //
-    //timeDelayFin value will reset to false automatically.
-
-
-    //-----The Thing to be Done------VVVV
+  if (autodelay2.delayScript(timerTwo) == true) { // if this is true, at once  // do the thing //
+ 
 
    GREENstateChange();
 
-    //-----^^^^^^^ End of The Thing thats done------
+
 
   }  // end of IF statement
-
-
-
-
-
 
 
 

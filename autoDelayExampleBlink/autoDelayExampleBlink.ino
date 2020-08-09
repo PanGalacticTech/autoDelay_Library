@@ -1,28 +1,47 @@
 /*--------------------------------------autoDelay Library Example--------------------------------
- * 
- *  The autoDelay library lets the user feed a single value in milliseconds to a function, which 
- *  returns the variable delayComplete as true when that time has elapsed.
- * 
- * Used to help avoid using the delay() function
- *  
- *  Written by Declan Heard. 03/08/2019 
- *  
- *  Free to Distibute and Use.
- * 
- */
+
+   Simple method for timing events without using interrupt based delay functions
+
+    autoDelay != delay();
+
+    functions include delays passed values in:
+    Micro & Milliseconds,
+    Seconds, and Minuites.
+    
+    Makes timing events a piece of cake.
+
+    Written by Declan Heard. 09/08/2020
+    
+    Released into Public Domain
+    Free to Distibute and Use.
+
+*/
 
 
 
-//-----------------------------Timer Function, Must include----------------------------
 
-#include "autoDelay.h"
+#include "autoDelay.h"                // Use " " Marks if library files are in local folder. 
 
-autoDelay autodelay;    // set up autodelay instance. NO PARENTHESIS if no value to pass.  
+//#include <autoDelay.h>              // Use < > Brackets if library files are in library folder.
 
-int timerOne = 500;    // Timer value - set to the length of delay required.
-                       
 
-//-----------------------^^^---Timer Function, Must include----------------------------
+
+autoDelay autodelay;    // set up autodelay instance.
+
+
+
+
+
+// delay time variables:
+
+int timerMillis = 500;
+
+uint32_t timerMicros = 50000;
+
+int timerSeconds = 2;
+
+int timerMinutes = 1;
+
 
 
 
@@ -37,70 +56,64 @@ int ledState = LOW;                            // state of the LED pin
 
 
 
-//---------------------------SETUP---------------------------------------
+
 
 void setup() {
 
+  // autodelay.begin(9600);                          // begin function to set up serial communication. Defaults to 112500 Baud. Not required for correct function
+
   pinMode(ledPin, OUTPUT);                       // sets up LED pin as output pin
 
-
-  autodelay.begin(9600);                          // function to set up serial communication. Uncomment if no required
-
 }
-//------------------------^^^^ END OF SETUP------------------------------
 
 
 
 
-
-
-//-----------------------------MAIN LOOP------------------------------------
 
 void loop() {
 
 
-// This was the old method for calling the delay script
-/*
-
- //------------timer function-----------------------------------------------------
- autodelay.delayScript(timerOne);   // call delayScript by feeding it an integer or another variable. Timing in Miliseconds
 
 
 
-
-
- //-------------------IF Time has elapsed -----------------------------------
-//  if (autodelay.delayComplete == true) { // if this is true, at once  // do the thing //  
-
-*/
-// Old Method ^^^ Depreciated
+  if (autodelay.millisDelay(timerMillis)) {   // if this returns true, at once  // do the thing //
 
 
 
-if (autodelay.delayScript(timerOne)){  // if this is true, at once  // do the thing //   
+    //-----The Thing to be Done------
 
-    
- //-----The Thing to be Done------VVVV  
-    
-    if (ledState == HIGH) {       
+    if (ledState == HIGH) {
 
       ledState = LOW;
-      
+
     } else if (ledState == LOW) {
 
       ledState = HIGH;
     }
-    
- //-----^^^^^^^ End of The Thing thats done------
- 
+
+    //-----^^^^^^^ End of The Thing thats done------
+
+
+
+
   }  // end of IF statement
 
 
-  
 
-  digitalWrite(ledPin, ledState);  // Write the LED state to the led pin. 
+  digitalWrite(ledPin, ledState);  // Write the LED state to the led pin.
 
 
 }  // end of void loop
 
-//-----------------------------------------------^^^ END OF MAIN LOOP-----------------------------------
+
+
+
+
+// ---- Alternative Timing Functions -----
+
+
+//  if (autodelay.microsDelay(timerMicros)) {
+
+//  if (autodelay.secondsDelay(timerSeconds)) {
+
+//  if (autodelay.minutesDelay(timerMinutes)) {
