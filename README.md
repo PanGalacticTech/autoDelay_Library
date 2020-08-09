@@ -22,11 +22,11 @@
 
 */
 
-To Use:
+// To Use:
 
 
 
-Set up instance for each different timer required by giving it a unique name:
+// Set up instance for each different timer required by giving it a unique name:
 
 autoDelay timerOne
 
@@ -34,7 +34,7 @@ autoDelay timerTwo
 
 
 
-In main loop call if statement with
+//In main loop call if statement with
 
 if (timerOne.millisDelay(long milliseconds)){
 
@@ -45,6 +45,7 @@ if (timerOne.millisDelay(long milliseconds)){
 
 
 
+/*
 
 Methods exist for:
 
@@ -53,7 +54,7 @@ Microseconds =  .microsDelay(long microseconds)
 Seconds      =  .secondsDelay(long seconds)
 Minutes      =  .minutesDelay(long minutes)
 
-
+*/
 
 
 
