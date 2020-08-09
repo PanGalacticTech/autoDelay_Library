@@ -43,18 +43,18 @@ if (timerOne.millisDelay(long milliseconds)){
 }
 
 
-
-
 /*
 
 Methods exist for:
 
-Milliseconds =  .millisDelay(long milliseconds)
-Microseconds =  .microsDelay(long microseconds)
-Seconds      =  .secondsDelay(long seconds)
-Minutes      =  .minutesDelay(long minutes)
+Milliseconds =  .millisDelay(long milliseconds)  
+Microseconds =  .microsDelay(long microseconds)  
+Seconds      =  .secondsDelay(long seconds)  
+Minutes      =  .minutesDelay(long minutes)  
 
 */
+
+
 
 
 
