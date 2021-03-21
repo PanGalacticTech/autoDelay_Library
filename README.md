@@ -38,10 +38,7 @@ ______________________________________________
 For infinately repeating behaviours:
 
 
->   Milliseconds =  .millisDelay(long milliseconds)  
->   Microseconds =  .microsDelay(long microseconds)  
->   Seconds      =  .secondsDelay(long seconds)  
->   Minutes      =  .minutesDelay(long minutes)  
+
    
 
 #### Delay Events
@@ -49,10 +46,7 @@ For infinately repeating behaviours:
 For finitely repeating behaviours (Can also be used for infinately repeating behaviours)
 
 
->   Milliseconds =  .millisDelayEvent(long milliseconds)  
->   Microseconds =  .microsDelayEven(long microseconds)  
->   Seconds      =  .secondsDelayEvent(long seconds)  
->   Minutes      =  .minutesDelayEvent(long minutes)  
+
 
 
 __________________________________________________________________________________________________________
@@ -68,75 +62,25 @@ ________________________________________________________________________________
 ## Use:
 
 
-
-// Set up instance for each different timer required by giving it a unique name:
-
-autoDelay timerOne
-
-autoDelay timerTwo
-
-
-
-//In main loop call if statement with
-
-if (timerOne.millisDelay(long milliseconds)){
-
-// Call timed events here
-
-}
-
-
-
-
 ### Precompiler Requirements:
 
-`#include  ` <br> <br>
-
-
-#### <u>AVR</u>
-Define the LED pin and the initial state.
-
-`     ` <br>
-`     ` <br> <br>
-
-#### <u>ESP32 / espressif</u>
-For ESP32 & espressif boards, additional variables are required for setup.
-
-`      `   <br>
-`       `  <br>
-`       `    <br>
-`                            `   <br> <br>
+`#include <autoDelay.h> ` <br> <br>
 
 ___________________________________________________________________________________________________________
 
 ### Object Constructors
 
-#### <u>AVR</u>
-Declaring a blink LED object:
+Set up instance for each different timer required by giving it a unique name:
 
-`       `<br> <br>
+`autoDelay timerOne;` <br>
 
-Declaring a fade LED object:
+`autoDelay timerTwo;` <br>
 
-`     `<br> <br>
-
-#### <u>ESP32 / espressif</u>
-Declaring a fade LED object:
-
-`    `<br> <br>
-
-<br>
-
-___________________________________________________________________________________________________________
+_________________________________________________________________________________________________________
 
 ### Setup Functions:
-Setup function for Blink LEDs pass the initial state as an argument. Defaults to off.
 
-`                            `   <br> <br>
-
-Setup function for Fade LEDs pass the initial brightness as an argument. Default is 150
-
-`                            `   <br> <br>
+No Setup functions required.
 
 <br>
 
@@ -144,59 +88,110 @@ ________________________________________________________________________________
 
 ### Loop Functions:
 
-Call performBlink() or PerformFade(); on LED objects to set the output pins.
-This method should be called in main loop for each ledObject or fadeLED object. 
+### Infinatly Repeating Delays
 
-For blink objects <br>
-`                            `   <br> <br>
+Methods for infinatly repeating behaviours are used in the main loop as such:
 
-For fade objects <br>
-`                            `   <br> <br>
+In main loop call if statement with
 
-Note: performBlink(); and performFade(); are both valid for fadeLED objects, performFade will also
-carry out any Blink events triggered. Fading events take priority over Blink events if they are called together.
+`if (timerOne.millisDelay(long milliseconds)){` <br>
+`// Call timed events here`<br>
+`}                    `   <br> <br>
 
-performFade(); is not valid for ledObjects. 
+Repleace .millisDelay() with alternative methods for delays measured in other units.
 
-<br>
-
+>   Milliseconds =  .millisDelay(long milliseconds)  
+>   Microseconds =  .microsDelay(long microseconds)  
+>   Seconds      =  .secondsDelay(long seconds)  
+>   Minutes      =  .minutesDelay(long minutes)  
 
 ___________________________________________________________________________________________________________
 
-### Starting & Stopping Events:
-#### Starting Events
+### Finite Repeating delayEvents
 
-Blink & Fade events must be triggered to be performed.
+Delay events are designed to give you more control over program execution. We can now
+start and stop the delayed behaviours using other control methods, and set behaviours to 
+repeat a set number of times before stopping.
 
-Start a Blink event that continues indefinatly:
+The implementation inside the main loop is the same as other autoDelay methods:
 
-`                            `   <br> <br>
+`if (timerOne.millisDelayEvent(long milliseconds)){` <br>
+`// Call timed events here`<br>
+`}                    `   <br> <br>
 
-Call a Blink event that repeats a number of times:
+Repleace .millisDelayEvent() with alternative methods for delays measured in other units.
 
-`                            `   <br> <br>
-
-
-Start a Fade event that continues indefinatly:
-
-`                            `   <br> <br>
-
-Call a Fade event that repeats a number of times:
-
-`                            `   <br> <br>
+>   Milliseconds =  .millisDelayEvent(long milliseconds)  
+>   Microseconds =  .microsDelayEven(long microseconds)  
+>   Seconds      =  .secondsDelayEvent(long seconds)  
+>   Minutes      =  .minutesDelayEvent(long minutes)  
 
 <br>
-_____
 
-#### Stopping Events
+### Starting Delay Events
 
-To stop a blink event call:
+With out main loop set up to respond to delayEvents, we can now add control methods to trigger 
+these events.
 
-`                            `   <br> <br>
+The most useful of these is 
 
-To stop a fade event call:
+`timerOne.startDelay(repeats);         // This will repeat delayEvent (repeats) number of times.` <br>
 
-`                            `   <br> <br>
+This method will start the delayEvent, and repeat this event for the number of times passed as 
+an argument. Calling this method will overwrite the previous state of the eventCounter. If this is not
+intended, use .restartDelay() method.<br>
+
+By passing any negative integer to this method, the delayEvent is triggered in infinate repeat mode,
+and will continue until a stop method is called, or a finite number of repeat events are added to the
+counter <br>
+
+`timerOne.startDelay(-1);              // This will repeat delayEvent indefinatly`<br>
+
+Indefinate reapeating behaviour can also be triggered by calling the method
+
+`timerOne.startIndefinate();`<br>
+
+This is functionally identical to the method above.<br><br>
+
+Method to restart a stopped or paused delay while adding additional events to the counter.
+
+`timerOne.restartDelay(additional);    // This starts or restarts delayEvent while adding additional events to the counter (default is 0)` <br>
+
+<br>
+
+### Stopping & Pausing Delay Events
+
+delayEvents will stop when their eventCounter reaches zero. 
+
+To stop delay events before their counter reaches zero, or to stop indefinatly repeating events, we can call the method
+
+`timerOne.stopDelay(resetRepeats);` <br>
+
+Default behaviour of this method resets eventCounter to zero. <br>
+
+Passing false to this method will not reset the eventCounter, <br>
+and is functionally the same as calling the following pauseDelay method. <br><br>
+
+To pause delayEvents while keeping the eventCounter variable at its current state, we can use the method
+
+`timerOne.pauseDelay();`<br><br>
+
+### Adding & Subtracting to eventCounter
+
+To change the number of events left in eventCounter, we can call the method
+
+`timerOne.addCounter(additional);`<br>
+
+The default behaviour is to add one to the number, however it can be passed any positive or negative integer in range,
+enabling you to both add & remove events from the delayEvent eventCounter. This method is safe, if a negative integer is passed
+which would take eventCounter into negative figures, it will reset it to zero. As such indefinate repeating behaviour cannot
+inadvertantly be triggered through use of this method.
+
+This method works while delayEvents are active, stopped or paused. <br><br><br>
+
+<p>I hope you find this library useful. Good luck using it and please report any bugs or issues you find. </p>
+
+
 
 
 ___________________________________________________________________________________________________________
