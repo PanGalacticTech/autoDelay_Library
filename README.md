@@ -130,7 +130,7 @@ Repleace .millisDelayEvent() with alternative methods for delays measured in oth
 
 ### Starting Delay Events
 
-With out main loop set up to respond to delayEvents, we can now add control methods to trigger 
+With our main loop set up to respond to delayEvents, we can now add control methods to trigger 
 these events.
 
 The most useful of these is 
