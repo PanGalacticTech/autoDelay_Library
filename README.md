@@ -34,26 +34,37 @@ ______________________________________________
 
 #### Delays
 
+/*
 For infinately repeating behaviours:
 
    Milliseconds =  .millisDelay(long milliseconds)  
    Microseconds =  .microsDelay(long microseconds)  
    Seconds      =  .secondsDelay(long seconds)  
    Minutes      =  .minutesDelay(long minutes)  
-   
+*/   
 
 #### Delay Events
 
 For finitely repeating behaviours (Can also be used for infinately repeating behaviours)
 
+/*
    Milliseconds =  .millisDelayEvent(long milliseconds)  
    Microseconds =  .microsDelayEven(long microseconds)  
    Seconds      =  .secondsDelayEvent(long seconds)  
    Minutes      =  .minutesDelayEvent(long minutes)  
+*/
 
+__________________________________________________________________________________________________________
 
+## Getting Started
+### Deployment
+1. Clone or Download library folder into Arduino IDE libraries folder.
+2. Extract files from zipped folder if required.
+3. Open Arduino IDE and select from example programs.
 
-// To Use:
+___________________________________________________________________________________________________________
+
+## Use:
 
 
 
@@ -74,27 +85,7 @@ if (timerOne.millisDelay(long milliseconds)){
 }
 
 
-/*
 
-Methods exist for:
-
-*/
-
-
-
-
-
-___________________________________________________________________________________________________________
-
-## Getting Started
-### Deployment
-1. Clone or Download library folder into Arduino IDE libraries folder.
-2. Extract files from zipped folder if required.
-3. Open Arduino IDE and select from example programs.
-
-___________________________________________________________________________________________________________
-
-## Use:
 
 ### Precompiler Requirements:
 
