@@ -1,4 +1,4 @@
-# autoDelay_library *(V2.0.0)*
+# autoDelay_library *(v2.0.0)*
 #### Built and maintained by [Declan Heard](mailto:pangalactictech@gmail.com "Email me!") on behalf of [Pan Galactic Tech](https://PanGalacticTech.com)
 
 /*--------------------------------------autoDelay.h Library -------------------------------
