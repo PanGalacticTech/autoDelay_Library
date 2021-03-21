@@ -30,24 +30,6 @@ ______________________________________________
 * Bin the delay(); function that robs you of time better used for other purposes.
 * Enable more complex programs by seperating time dependent events from each others execution.
 
-### Methods Include
-
-#### Delays
-
-
-For infinately repeating behaviours:
-
-
-
-   
-
-#### Delay Events
-
-For finitely repeating behaviours (Can also be used for infinately repeating behaviours)
-
-
-
-
 
 __________________________________________________________________________________________________________
 
