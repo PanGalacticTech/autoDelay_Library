@@ -11,8 +11,7 @@
     Micro & Milliseconds,
     Seconds, and Minutes.
     
-    Makes timing events a piece of cake.
-    
+    Makes timing events a piece of cake.    
     
 */
 
@@ -31,6 +30,26 @@ ______________________________________________
 * Bin the delay(); function that robs you of time better used for other purposes.
 * Enable more complex programs by seperating time dependent events from each others execution.
 
+### Methods Include
+
+#### Delays
+
+For infinately repeating behaviours:
+
+   Milliseconds =  .millisDelay(long milliseconds)  
+   Microseconds =  .microsDelay(long microseconds)  
+   Seconds      =  .secondsDelay(long seconds)  
+   Minutes      =  .minutesDelay(long minutes)  
+   
+
+#### Delay Events
+
+For finitely repeating behaviours (Can also be used for infinately repeating behaviours)
+
+   Milliseconds =  .millisDelayEvent(long milliseconds)  
+   Microseconds =  .microsDelayEven(long microseconds)  
+   Seconds      =  .secondsDelayEvent(long seconds)  
+   Minutes      =  .minutesDelayEvent(long minutes)  
 
 
 
@@ -58,11 +77,6 @@ if (timerOne.millisDelay(long milliseconds)){
 /*
 
 Methods exist for:
-
-Milliseconds =  .millisDelay(long milliseconds)  
-Microseconds =  .microsDelay(long microseconds)  
-Seconds      =  .secondsDelay(long seconds)  
-Minutes      =  .minutesDelay(long minutes)  
 
 */
 
