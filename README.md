@@ -9,7 +9,7 @@
 
     functions include delays passed values in:
     Micro & Milliseconds,
-    Seconds, and Minutes.
+    Seconds, & Minutes.
     
     Makes timing events a piece of cake.    
     
