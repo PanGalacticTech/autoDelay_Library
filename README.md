@@ -201,7 +201,7 @@ less accurate triggering of timed events.
 
 ### Known Issues V2.0.0
   - Please report any bugs or issues found.
-  - 
+
 ### Known Issues V1.0.0
   - Please report any bugs or issues found.
 
