@@ -34,25 +34,26 @@ ______________________________________________
 
 #### Delays
 
-/*
+
 For infinately repeating behaviours:
 
-   Milliseconds =  .millisDelay(long milliseconds)  
-   Microseconds =  .microsDelay(long microseconds)  
-   Seconds      =  .secondsDelay(long seconds)  
-   Minutes      =  .minutesDelay(long minutes)  
-*/   
+
+>   Milliseconds =  .millisDelay(long milliseconds)  
+>   Microseconds =  .microsDelay(long microseconds)  
+>   Seconds      =  .secondsDelay(long seconds)  
+>   Minutes      =  .minutesDelay(long minutes)  
+   
 
 #### Delay Events
 
 For finitely repeating behaviours (Can also be used for infinately repeating behaviours)
 
-/*
-   Milliseconds =  .millisDelayEvent(long milliseconds)  
-   Microseconds =  .microsDelayEven(long microseconds)  
-   Seconds      =  .secondsDelayEvent(long seconds)  
-   Minutes      =  .minutesDelayEvent(long minutes)  
-*/
+
+>   Milliseconds =  .millisDelayEvent(long milliseconds)  
+>   Microseconds =  .microsDelayEven(long microseconds)  
+>   Seconds      =  .secondsDelayEvent(long seconds)  
+>   Minutes      =  .minutesDelayEvent(long minutes)  
+
 
 __________________________________________________________________________________________________________
 
