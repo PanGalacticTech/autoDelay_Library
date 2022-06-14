@@ -1,5 +1,5 @@
 # autoDelay_library *(v2.0.0)*
-#### Built and maintained by [Declan Heard](mailto:pangalactictech@gmail.com "Email me!") on behalf of [Pan Galactic Tech](https://PanGalacticTech.com)
+#### Built and maintained by [Imogen Heard](mailto:pangalactictech@gmail.com "Email me!") on behalf of [Pan Galactic Tech](https://PanGalacticTech.com)
 
 /*--------------------------------------autoDelay.h Library -------------------------------
 
@@ -218,9 +218,9 @@ less accurate triggering of timed events.
 
 
 ### Author
-#### Declan Heard
-* [LinkedIn](https://www.linkedin.com/in/declan-heard-91103b58/)
-* Email: [Personal](mailto:dec.h38@gmail.com "dec.h38@gmail.com") | [Company](mailto:PanGalacticTech@gmail.com "PanGalacticTech@gmail.com")
+#### Imogen Heard
+* [LinkedIn](https://www.linkedin.com/in/declan-heard-91103b58/](https://www.linkedin.com/in/imogen-heard-91103b58/)
+* Email: [Personal](mailto:mogen.wren91@gmail.com "imogen.wren91@gmail.com") | [Company](mailto:PanGalacticTech@gmail.com "PanGalacticTech@gmail.com")
 * [Github Profile](https://github.com/PanGalacticTech)
 
 
