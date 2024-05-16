@@ -50,6 +50,10 @@ class autoDelay
     bool secondsDelay(uint32_t delayTime);           // delay function using Seconds
 
     bool minutesDelay(uint32_t delayTime);           // delay function using Minutes
+	
+	void resetDelayTime_mS();								// Sets the previousTime variable to the current time in millis() (for all delays except micros)
+	
+	void resetDelayTime_uS();								// Sets the previousTime variable to the current time in micros() (for microS delays)
 
 
     // delayEvent Loop Methods

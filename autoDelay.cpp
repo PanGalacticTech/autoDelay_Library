@@ -217,7 +217,9 @@ bool autoDelay::minutesDelay(uint32_t delayTime) {    // Delay function that can
 
 
 
-
+void autoDelay::resetDelayTime_mS(){
+	previousTime = millis();
+}
 
 
 // Depreciated // Old version
