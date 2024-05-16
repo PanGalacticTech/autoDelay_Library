@@ -11,7 +11,7 @@
     
     Makes timing events a piece of cake.
 
-    Written by Declan Heard. 09/08/2020
+    Written by Imogen Heard. 09/08/2020
     
     Released into Public Domain
     Free to Distibute and Use.
