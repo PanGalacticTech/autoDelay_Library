@@ -219,7 +219,7 @@ less accurate triggering of timed events.
 
 ### Author
 #### Imogen Heard
-* [LinkedIn](https://www.linkedin.com/in/declan-heard-91103b58/](https://www.linkedin.com/in/imogen-heard-91103b58/)
+* [LinkedIn](https://www.linkedin.com/in/imogen-heard-91103b58/)
 * Email: [Personal](mailto:mogen.wren91@gmail.com "imogen.wren91@gmail.com") | [Company](mailto:PanGalacticTech@gmail.com "PanGalacticTech@gmail.com")
 * [Github Profile](https://github.com/PanGalacticTech)
 
