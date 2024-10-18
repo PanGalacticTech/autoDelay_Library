@@ -1,5 +1,5 @@
 # autoDelay_library *(v2.0.0)*
-#### Built and maintained by [Imogen Heard](mailto:pangalactictech@gmail.com "Email me!") on behalf of [Pan Galactic Tech](https://PanGalacticTech.com)
+#### Built and maintained by [Imogen Heard](mailto:pangalactictech@gmail.com "Email me!")
 
 /*--------------------------------------autoDelay.h Library -------------------------------
 
