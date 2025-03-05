@@ -221,6 +221,10 @@ void autoDelay::resetDelayTime_mS(){
 	previousTime = millis();
 }
 
+void autoDelay::resetDelayTime_uS(){
+	previousTime = micros();
+}
+
 
 // Depreciated // Old version
 
